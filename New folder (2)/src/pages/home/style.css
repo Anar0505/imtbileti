@@ -1,0 +1,90 @@
+.items_headers{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 70%;
+}
+.popular{
+    color: rgb(0, 0, 0);
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    padding:0 15px
+}
+.consec{
+    color: rgb(119, 119, 119);
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: normal;
+    padding:0 15px
+}
+.cards_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+.cards_card{
+    margin-bottom: 50px;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card_img{
+    margin-bottom: 19px;
+}
+.card_img img{
+    width: 100%;
+}
+.card_name{
+    color: #0b1c39;
+    margin-top: 0px;
+    font-style: normal;
+    font-weight: 500;
+}
+.card_price{
+    color: #444444;
+    font-size: 18px;
+    font-weight: 500;
+    display: block;
+}
+.addtobasket {
+    background: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.addtobasket:hover {
+    background: #45a049;
+}
+
+@media only screen and (max-width: 990px) {
+    .items_headers{
+        max-width: 85%;
+    }
+    .cards_container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    
+    }
+  }
+  @media only screen and (max-width: 580px) {
+    .items_headers{
+        max-width: 100%;
+    }
+    .cards_container{
+        display: grid;
+        grid-template-columns: 1fr;
+    
+    }
+  }
