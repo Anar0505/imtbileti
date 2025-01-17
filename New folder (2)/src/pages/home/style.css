@@ -1,3 +1,6 @@
+.items{
+    margin-top: 100px;
+}
 .items_headers{
     margin: 0 auto;
     display: flex;

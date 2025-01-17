@@ -1,0 +1,37 @@
+.admin{
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.adminlogo{
+    font-size: 16px;
+    font-family: "Josefin Sans", sans-serif;
+    color: #141517;
+    font-weight: 600;
+    padding: 41px 21px;
+    text-transform: capitalize;
+    display: block;
+}
+.admin__items{
+display: flex;align-items: center;
+}
+.admin__items__item{
+    font-size: 16px;
+    font-family: "Josefin Sans", sans-serif;
+    color: #141517;
+    font-weight: 600;
+    padding: 41px 21px;
+    text-transform: capitalize;
+    display: block;
+}
+.admin__link{
+
+    color: #000000;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 31px 19px;
+}
+.admin__link a{
+    color: inherit;
+}

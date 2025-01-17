@@ -50,7 +50,7 @@ app.get('/products/:id',async (req, res) => {
     try{
     const id = req.params.id 
     await Watch.findByIdAndDelete(id)
-    res.send("delete")}
+    res.send({msg:"delete"})}
     catch{
       res.send("dont work")
     }

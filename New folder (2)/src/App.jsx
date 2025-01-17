@@ -1,24 +1,29 @@
-import { useState } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import MainLayout from './Layout/MainLayout'
 import { BasketProvider } from './context/BasketProvider'
 import Home from './pages/home'
+import AdminLayout from './Layout/AdminLayout'
+import AdminTable from './pages/AdminTable'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-    <BasketProvider>
-       <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<MainLayout/>}>
-          <Route index element={<Home />} />
+      <BasketProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<MainLayout />}>
+              <Route index element={<Home />} />
+            </Route>
+          </Routes>
+          <Routes>
+            <Route path="adminpage" element={<AdminLayout />}>
+              <Route index element={<AdminTable />} />
 
-        </Route>
-      </Routes>
-    </BrowserRouter>
-    </BasketProvider>
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </BasketProvider>
     </>
   )
 }

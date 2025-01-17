@@ -1,0 +1,36 @@
+table{
+    border: 1px solid;
+    border-collapse: collapse;
+    width: 100%;
+}
+tr {
+    border: 1px solid;
+    
+}
+ td {
+    border: 1px solid;
+padding: 20px;
+}
+ th {
+    border: 1px solid;
+    padding: 20px;
+}
+td img{
+    display: block;
+    margin: 0 auto;
+    width: 80px;
+    height: 80px;
+}
+td button{
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(241, 77, 77);
+    transition: 0.4s;
+    border: none;
+}
+td button:hover{
+    background-color: red;
+}

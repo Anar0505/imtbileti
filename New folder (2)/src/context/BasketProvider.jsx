@@ -38,8 +38,22 @@ function addToBasket(obj) {
         }
     });
 }
+
+
+function deleteUser(id)  {
+    fetch(`http://localhost:3000/products/${id}`, {
+      method: "DELETE",
+    })
+      .then(response => response.json())
+      .then(() => {
+        setdata(data => {
+          return data.filter(item => item._id !== id)
+        })
+     
+      })
+  }
     return (
-        <BasketContext.Provider value={{ data, setdata, basket, setbasket,addToBasket }}>
+        <BasketContext.Provider value={{ data, setdata, basket, setbasket,addToBasket ,deleteUser}}>
             {children}
         </BasketContext.Provider>
     );
