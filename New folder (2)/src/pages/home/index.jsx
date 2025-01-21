@@ -2,9 +2,12 @@ import React, { useContext } from 'react'
 import { BasketContext } from '../../context/BasketProvider'
 import Container from '../../components/container';
 import './style.css'
+import { useNavigate } from 'react-router-dom';
 function Home() {
 
-  const { data, setdata, addToBasket ,basket} = useContext(BasketContext);
+  const { data, setdata, addToBasket ,basket,wish,setwish,addToWishList} = useContext(BasketContext);
+  let total = basket.reduce((acc,prototype)=>{return acc+prototype.price*prototype.count},0)
+  const navigate =useNavigate()
   return (
     <section className="items">
       <Container className="container___0">
@@ -18,12 +21,13 @@ function Home() {
               <div className="card_img">
                 <img src={x.img} alt={x.name} />
               </div>
-              <div className='card_name'>{x.name}</div>
+              <div className='card_name' onClick={()=>navigate("/"+x._id)}>{x.name}</div>
               <div className='card_price'>{x.price}</div>
-              <div className='card_buttons'><button className='addtobasket' onClick={() => addToBasket(x)}>{basket.find(item => item._id === x._id)? "artir":"add"}</button></div>
+              <div className='card_buttons'><button className='addtobasket' onClick={() => addToBasket(x)}>{basket.find(item => item._id === x._id)? "artir":"add"}</button><button className='addtobasket' onClick={() => addToWishList(x)}>{wish.find(item => item._id === x._id)? "remove":"add"}</button></div>
             </div>
           )}
         </div>
+        <h1> {total}dsfgj</h1>
       </Container>
     </section>
   )
